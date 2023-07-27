@@ -17,7 +17,9 @@ pipeline {
         }
         stage('desplegando') {
             steps {
-                echo 'deploy ...............'
+               script {
+                    publicando.clonar(version: "1.0")
+                }
             }
         }
     }
