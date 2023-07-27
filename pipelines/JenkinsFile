@@ -18,7 +18,7 @@ pipeline {
         stage('desplegando') {
             steps {
                script {
-                    publicando.clonar(version: "1.0")
+                    dockerLib.publicando(version: "1.0")
                 }
             }
         }
